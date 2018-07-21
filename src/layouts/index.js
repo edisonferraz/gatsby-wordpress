@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import './index.css'
+import Link from 'gatsby-link'
 
 const Layout = ({ children, data }) => {
   const siteTitle = data.allWordpressPage.edges[0].node.title;
@@ -20,6 +21,15 @@ const Layout = ({ children, data }) => {
         ]}
       />
       <Header siteTitle={siteTitle} />
+
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/blog">Blog</Link></li>
+        <li><Link to="/solutions">Solutions</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+      </ul>
+
       <div
         style={{
           margin: '0 auto',
