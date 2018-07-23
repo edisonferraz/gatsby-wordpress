@@ -46,7 +46,7 @@ const Header = ({ siteTitle }) => (
       }}>
         {
           MENU.map(item => (
-            <li>
+            <li key={item.url}>
               <Link
                 to={item.url}
                 style={{
